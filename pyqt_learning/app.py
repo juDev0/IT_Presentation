@@ -22,12 +22,36 @@
 
 
 """This proves that you still will have a window without QWidget"""
-import sys 
-from PyQt5.QtWidgets import QApplication, QPushButton
-from PyQt5.QtCore import *
+# import sys 
+# from PyQt5.QtWidgets import QApplication, QPushButton
+# from PyQt5.QtCore import *
+# from PyQt5.QtGui import *
+
+# app = QApplication(sys.argv)
+# window = QPushButton("Push Me")
+# window.show()
+# app.exec()
+
+
+"""Doing the same thing but with a class"""
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 from PyQt5.QtGui import *
+from PyQt5.QtCore import *
+
+import sys  
+
+
+class MainWindow(QMainWindow):
+
+    # def __init__(self, *args, **Kwargs):
+       # super(MainWindow, self).__init__(*args, **Kwargs)
+
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("my Awsone App")
+
 
 app = QApplication(sys.argv)
-window = QPushButton("Push Me")
-window.show()
+MainWindow = MainWindow()
+MainWindow.show()
 app.exec()
