@@ -1,4 +1,7 @@
+"""A normal application interface"""
 from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
 
 # Only needed for access to command line arguments
 import sys
